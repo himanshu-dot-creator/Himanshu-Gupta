@@ -5,7 +5,6 @@ import webbrowser
 import time
 import tempfile # Yeh nayi line add karein
 
-# Bolne ka naya, behtar function
 def speak(audio):
     try:
         print("NOVA is speaking...")
@@ -28,7 +27,6 @@ def speak(audio):
     except Exception as e:
         print(f"Error in speaking: {e}")
 
-# Sunne aur command lene ka function
 def takeCommand():
     r = sr.Recognizer()
     with sr.Microphone() as source:
@@ -45,7 +43,6 @@ def takeCommand():
         return "None"
     return query
 
-# NOVA ki main logic
 if __name__ == "__main__":
     time.sleep(10) # 10 seconds ka delay jodein
     speak("Namaste! Main NOVA hoon. Kaise madad karoon?")
